@@ -6,8 +6,8 @@ const userController = require("../../controllers/api/userController");
 // route -> api/users/
 router.get("/", userController.index);
 // route -> api/users/login
-router.get("/login", () => {});
+router.post("/login", userController.login);
 // route -> api/users/signup
-router.get("/signup", () => {});
+router.post("/signup", userController.signup);
 
 module.exports = router;
