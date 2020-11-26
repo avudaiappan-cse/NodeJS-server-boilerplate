@@ -2,12 +2,14 @@ const express = require("express");
 
 const db = require("./config/mongoose");
 const passport = require("passport");
+const cors = require("cors");
 const passportJWT = require("./config/passport_JWTStrategy");
 const PORT = 8000;
 const app = express();
 const morgan = require("morgan");
 
 app.use(express.json());
+app.use(cors());
 
 app.use(morgan("tiny"));
 
